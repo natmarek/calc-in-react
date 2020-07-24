@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import { evaluate } from 'mathjs';
-import Buttons from './Buttons'
-import Display from './Display'
+import Buttons from './components/Buttons'
+import Display from "./components/Display"
 
 
 
