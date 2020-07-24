@@ -29,7 +29,7 @@ const NumberBtns = (props) => {
                 
                 
                 <Button onClick={ ()=> props.onClick(1)}>1</Button>
-                <Button nClick={ ()=> props.onClick(2)}>2</Button>
+                <Button onClick={ ()=> props.onClick(2)}>2</Button>
                 <Button onClick={ ()=> props.onClick(3)}>3</Button>
                 <Button onClick={ ()=> props.onClick('+')}>+</Button><br/>
 
