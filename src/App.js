@@ -11,19 +11,20 @@ import styled from 'styled-components'
 
 const Wrapper = styled.section`
   padding: 2em;
-  background: #f2eaed;
+  background: #c7d3d4ff;
+  border-radius: 10px;
 `;
 
 const Input = styled.input`
-  border-radius: 3px;
-  padding: 0rem 0;
+  border-radius: 5px;
+  padding: 0;
   margin: 0.5rem 0rem;
-  width: 680px;
-  height: 170px;
+  width: 440px;
+  height: 130px;
   background: whitesmoke;
   color: black;
   border: 2px solid #192e5b;
-  font-size: 70px
+  font-size: 50px
 `;
 
 

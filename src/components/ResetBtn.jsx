@@ -10,8 +10,14 @@ const Button = styled.button`
   font-size: 30px;
   font-weight: bold;
   line-height: 2.0;
-  padding: 1.5em 5.3em;
-  text-align: center;`
+  padding: 0.5em 3.3em;
+  text-align: center;
+  :hover  {
+    cursor: pointer;
+  }`
+
+
+
 
 const ResetBtn = props => {
     return (

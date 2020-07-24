@@ -9,15 +9,11 @@ const Button = styled.button`
   font-size: 30px;
   font-weight: bold;
   line-height: 2.0;
-  padding: 1.5em 2.5em;
+  padding: 0.5em 1.5em;
   text-align: center;
-/* background-color: palevioletred;
-color: white;
-font-size: 1em;
-margin: 0;
-padding: 1em 3em;
-border: 2px solid white;
-border-radius: 3px; */
+  :hover  {
+    cursor: pointer;
+  }
 
 `;
 
