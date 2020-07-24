@@ -1,26 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import { evaluate } from 'mathjs';
+import Buttons from './Buttons'
+import Display from './Display'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+
+class App extends Component {
+  state ={
+    result: ""
+  }
+
+
+  handleDisplay= (num) => {
+    const {result}=this.state
+    this.setState({ 
+      result: result + String(num)
+      
+    })
+  }
+ 
+  reset = () => {
+    this.setState({
+      result: "0"
+    })}
+
+
+
+  calc = () => {
+    const {result}=this.state
+    this.setState({ result: evaluate(result)})
+  }
+
+
+  render() {
+    // let value = this.state.result
+    return (
+      <div>
+        {/* <h1>{value}</h1> */}
+        <Display result={this.state.result}/>
+        <input value={this.state.result}/><br/>
+        <button onClick={() =>this.calc()}> = </button>
+        <button onClick={()=>this.reset()}>C</button><br/>
+        <Buttons onClick = {this.handleDisplay} />      
+      </div>
+    )
+  }
 }
 
 export default App;
