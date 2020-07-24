@@ -1,10 +1,30 @@
 import React, { Component } from 'react';
 import './App.css';
-import { evaluate } from 'mathjs';
-import Buttons from './components/Buttons'
+import { evaluate} from 'mathjs';
+import NumberBtns from './components/NumberBtns'
 import Display from "./components/Display"
+import CalcBtn from './components/CalcBtn.';
+import ResetBtn from './components/ResetBtn';
+import styled from 'styled-components'
 
 
+
+const Wrapper = styled.section`
+  padding: 2em;
+  background: #f2eaed;
+`;
+
+const Input = styled.input`
+  border-radius: 3px;
+  padding: 0rem 0;
+  margin: 0.5rem 0rem;
+  width: 680px;
+  height: 170px;
+  background: whitesmoke;
+  color: black;
+  border: 2px solid #192e5b;
+  font-size: 70px
+`;
 
 
 class App extends Component {
@@ -37,14 +57,19 @@ class App extends Component {
   render() {
     // let value = this.state.result
     return (
-      <div>
-        {/* <h1>{value}</h1> */}
-        <Display result={this.state.result}/>
-        <input value={this.state.result}/><br/>
-        <button onClick={() =>this.calc()}> = </button>
-        <button onClick={()=>this.reset()}>C</button><br/>
-        <Buttons onClick = {this.handleDisplay} />      
-      </div>
+      <Wrapper>
+        {/* <Title>
+          <Display result={this.state.result}/>
+        </Title> */}
+        
+        <Input value={this.state.result}/><br/>
+        <div className="container">
+          <ResetBtn className="grid-item resetBtn" onClick={this.reset} />
+          <CalcBtn className="grid-item calcBtn" onClick={this.calc}/>
+          <NumberBtns className="grid-item" onClick = {this.handleDisplay} /> 
+        </div>
+             
+      </Wrapper>
     )
   }
 }
