@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import { evaluate} from 'mathjs';
 import NumberBtns from './components/NumberBtns'
-import Display from "./components/Display"
 import CalcBtn from './components/CalcBtn.';
 import ResetBtn from './components/ResetBtn';
 import styled from 'styled-components'
@@ -44,7 +43,7 @@ class App extends Component {
  
   reset = () => {
     this.setState({
-      result: "0"
+      result: ""
     })}
 
 
