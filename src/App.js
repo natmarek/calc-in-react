@@ -36,8 +36,7 @@ class App extends Component {
   handleDisplay= (num) => {
     const {result}=this.state
     this.setState({ 
-      result: result + String(num)
-      
+      result: result + String(num)  
     })
   }
  
@@ -58,14 +57,11 @@ class App extends Component {
     // let value = this.state.result
     return (
       <Wrapper>
-        {/* <Title>
-          <Display result={this.state.result}/>
-        </Title> */}
         
         <Input value={this.state.result}/><br/>
         <div className="container">
-          <ResetBtn className="grid-item resetBtn" onClick={this.reset} />
-          <CalcBtn className="grid-item calcBtn" onClick={this.calc}/>
+          <ResetBtn  onClick={this.reset} />
+          <CalcBtn onClick={this.calc}/>
           <NumberBtns className="grid-item" onClick = {this.handleDisplay} /> 
         </div>
              

@@ -11,7 +11,7 @@ const Button = styled.button`
   line-height: 2.0;
   padding: 0.5em 1em;
   width: ${props => props.primary ? "240px" : "120px"};
-  background-color: ${props => props.promary ? "white" : "ebecf1"}
+  background-color: ${props => props.promary ? "whi te" : "ebecf1"};
   text-align: center;
   wi
   :hover  {
