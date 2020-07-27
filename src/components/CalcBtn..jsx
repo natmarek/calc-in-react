@@ -11,6 +11,7 @@ const Button = styled.button`
   line-height: 2.0;
   padding: 0.5em 3.3em;
   text-align: center;
+  width:240px;
 
   :hover  {
     cursor: pointer;
